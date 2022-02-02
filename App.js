@@ -9,14 +9,16 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
+
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { DefaultTheme, Provider as PaperProvide} from 'react-native-paper';
+
 import Inicio from './views/Inicio';
 import NuevoCliente from './views/NuevoCliente';
 import DetallesCliente from './views/DetallesCliente';
 import Barra from './components/ui/Barra';
 
-import { DefaultTheme, Provider } from 'react-native-paper';
 
 const Stack = createStackNavigator();
 
@@ -34,6 +36,7 @@ const App = () => {
 
   return (
    <>
+   <PaperProvide>
     <NavigationContainer>
         <Stack.Navigator
         initialRouteName="Inicio"
@@ -79,6 +82,7 @@ const App = () => {
       
         </Stack.Navigator>
     </NavigationContainer>
+    </PaperProvide>
    </>
   );
 };
