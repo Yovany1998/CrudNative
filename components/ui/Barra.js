@@ -9,9 +9,11 @@ const Barra = ({navigation,route}) => {
     }
 
   return (
-      <Button icon="plus-circle" color='#FFF' onPress={() => handlePress()}>
-          Cliente
-      </Button>
+    //   <Button icon="plus-circle" color='#FFF' onPress={() => handlePress()}>
+    //       Cliente
+    //   </Button>
+    <>
+    </>
   )
 };
 const styles = StyleSheet.create({

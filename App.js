@@ -18,8 +18,13 @@ import Inicio from './views/Inicio';
 import NuevoCliente from './views/NuevoCliente';
 import DetallesCliente from './views/DetallesCliente';
 import Barra from './components/ui/Barra';
+import { LogBox } from 'react-native';
 
+LogBox.ignoreLogs([
+  "[react-native-gesture-handler] Seems like you\'re using an old API with gesture components, check out new Gestures system!",
+]);
 
+LogBox.ignoreLogs(['Remote debugger']);
 const Stack = createStackNavigator();
 
 
